@@ -1,7 +1,0 @@
-npm error Lifecycle script `start` failed with error:
-npm error code 4294967295
-npm error path C:\Users\YETEXE\Desktop\AdminPanel\apps\web
-npm error workspace web@1.0.0
-npm error location C:\Users\YETEXE\Desktop\AdminPanel\apps\web
-npm error command failed
-npm error command C:\WINDOWS\system32\cmd.exe /d /s /c dotenv -e ../../.env -- next start -p 3000
