@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --renk-zemin: #f8fafc;
+  --renk-metin: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--renk-zemin);
+  color: var(--renk-metin);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

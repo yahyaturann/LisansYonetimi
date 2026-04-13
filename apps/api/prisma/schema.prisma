@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("users")
+}
+
+model Project {
+  id             String    @id @default(cuid())
+  name           String
+  apiKey         String    @unique @map("api_key")
+  licensePrefix  String    @default("LIS") @map("license_prefix")
+  settings       Json
+  createdAt      DateTime  @default(now()) @map("created_at")
+  licenses       License[]
+  logs           Log[]
+
+  @@index([apiKey])
+  @@map("projects")
+}
+
+model License {
+  id             String       @id @default(cuid())
+  projectId      String       @map("project_id")
+  licenseKey     String       @unique @map("license_key")
+  expiresAt      DateTime?    @map("expires_at")
+  maxActivations Int?         @map("max_activations")
+  metadata       Json
+  createdAt      DateTime     @default(now()) @map("created_at")
+  project        Project      @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  activations    Activation[]
+
+  @@index([projectId])
+  @@index([licenseKey])
+  @@map("licenses")
+}
+
+model Activation {
+  id        String   @id @default(cuid())
+  licenseId String   @map("license_id")
+  ip        String?
+  domain    String?
+  hwid      String?
+  createdAt DateTime @default(now()) @map("created_at")
+  license   License  @relation(fields: [licenseId], references: [id], onDelete: Cascade)
+
+  @@index([licenseId])
+  @@map("activations")
+}
+
+model Log {
+  id        String   @id @default(cuid())
+  projectId String   @map("project_id")
+  message   String
+  createdAt DateTime @default(now()) @map("created_at")
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@map("logs")
+}

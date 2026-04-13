@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(curl:*)",
+      "Bash(netstat -ano)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill:*)",
+      "Bash(tail:*)",
+      "Bash(awk '{print $5}')",
+      "Bash(xargs -r kill -9)",
+      "Bash(npx tsc:*)",
+      "Bash(kill -9 35292)",
+      "Bash(taskkill //PID 35292 //F)",
+      "Bash(findstr :3000)",
+      "Bash(taskkill:*)",
+      "Bash(cmd:*)",
+      "Bash(timeout 10)",
+      "Bash(cd C:/Users/YETEXE/Desktop/AdminPanel/apps/web/src/app/api/panel/projeler/[id])",
+      "Bash(findstr LISTENING)",
+      "Bash(npx prisma:*)",
+      "Bash(findstr :4000)",
+      "Bash(cmd //c \"taskkill /PID 19388 /F\")",
+      "Bash(rm -rf apps/web/.next)"
+    ]
+  }
+}
