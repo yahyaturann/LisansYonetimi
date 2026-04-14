@@ -1,0 +1,20 @@
+{
+  "/api/oturum/cikis/route": "app/api/oturum/cikis/route.js",
+  "/api/panel/lisanslar/[id]/route": "app/api/panel/lisanslar/[id]/route.js",
+  "/api/panel/loglar/route": "app/api/panel/loglar/route.js",
+  "/api/oturum/giris/route": "app/api/oturum/giris/route.js",
+  "/api/panel/projeler/[id]/settings/route": "app/api/panel/projeler/[id]/settings/route.js",
+  "/api/panel/ozet/route": "app/api/panel/ozet/route.js",
+  "/api/panel/projeler/route": "app/api/panel/projeler/route.js",
+  "/api/panel/lisanslar/route": "app/api/panel/lisanslar/route.js",
+  "/api/panel/projeler/[id]/lisanslar/route": "app/api/panel/projeler/[id]/lisanslar/route.js",
+  "/api/panel/projeler/[id]/route": "app/api/panel/projeler/[id]/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/giris/page": "app/giris/page.js",
+  "/panel/lisanslar/page": "app/panel/lisanslar/page.js",
+  "/panel/page": "app/panel/page.js",
+  "/panel/projeler/page": "app/panel/projeler/page.js",
+  "/panel/loglar/page": "app/panel/loglar/page.js",
+  "/panel/dokumantasyon/page": "app/panel/dokumantasyon/page.js"
+}

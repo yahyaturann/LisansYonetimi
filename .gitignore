@@ -1,12 +1,8 @@
 node_modules
-.next
-dist
 coverage
 .turbo
 .env
 .env.local
 apps/*/.env
-apps/*/.next
-apps/*/dist
 apps/api/generated
 *.log

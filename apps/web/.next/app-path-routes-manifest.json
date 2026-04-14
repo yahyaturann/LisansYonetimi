@@ -1,0 +1,20 @@
+{
+  "/api/oturum/cikis/route": "/api/oturum/cikis",
+  "/api/panel/lisanslar/[id]/route": "/api/panel/lisanslar/[id]",
+  "/api/panel/loglar/route": "/api/panel/loglar",
+  "/api/oturum/giris/route": "/api/oturum/giris",
+  "/api/panel/projeler/[id]/settings/route": "/api/panel/projeler/[id]/settings",
+  "/api/panel/ozet/route": "/api/panel/ozet",
+  "/api/panel/projeler/route": "/api/panel/projeler",
+  "/api/panel/lisanslar/route": "/api/panel/lisanslar",
+  "/api/panel/projeler/[id]/lisanslar/route": "/api/panel/projeler/[id]/lisanslar",
+  "/api/panel/projeler/[id]/route": "/api/panel/projeler/[id]",
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/giris/page": "/giris",
+  "/panel/lisanslar/page": "/panel/lisanslar",
+  "/panel/page": "/panel",
+  "/panel/projeler/page": "/panel/projeler",
+  "/panel/loglar/page": "/panel/loglar",
+  "/panel/dokumantasyon/page": "/panel/dokumantasyon"
+}

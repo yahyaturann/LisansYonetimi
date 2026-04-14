@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/panel/lisanslar/[id]",
+      "regex": "^/api/panel/lisanslar/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/panel/lisanslar/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/panel/projeler/[id]",
+      "regex": "^/api/panel/projeler/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/panel/projeler/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/panel/projeler/[id]/lisanslar",
+      "regex": "^/api/panel/projeler/([^/]+?)/lisanslar(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/panel/projeler/(?<nxtPid>[^/]+?)/lisanslar(?:/)?$"
+    },
+    {
+      "page": "/api/panel/projeler/[id]/settings",
+      "regex": "^/api/panel/projeler/([^/]+?)/settings(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/panel/projeler/(?<nxtPid>[^/]+?)/settings(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/giris",
+      "regex": "^/giris(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/giris(?:/)?$"
+    },
+    {
+      "page": "/panel",
+      "regex": "^/panel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/panel(?:/)?$"
+    },
+    {
+      "page": "/panel/dokumantasyon",
+      "regex": "^/panel/dokumantasyon(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/panel/dokumantasyon(?:/)?$"
+    },
+    {
+      "page": "/panel/lisanslar",
+      "regex": "^/panel/lisanslar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/panel/lisanslar(?:/)?$"
+    },
+    {
+      "page": "/panel/loglar",
+      "regex": "^/panel/loglar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/panel/loglar(?:/)?$"
+    },
+    {
+      "page": "/panel/projeler",
+      "regex": "^/panel/projeler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/panel/projeler(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
