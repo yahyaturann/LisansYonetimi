@@ -203,7 +203,8 @@ export const bellekPrisma = {
         expiresAt: data.expiresAt,
         maxActivations: data.maxActivations,
         metadata: data.metadata,
-        createdAt: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
       };
 
       lisanslar.push(lisans);

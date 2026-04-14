@@ -63,9 +63,8 @@ export function LisanslarYonetimi() {
     if (aramaMetni) {
       const arama = aramaMetni.toLowerCase();
       const licenseKey_eslesme = lisans.licenseKey.toLowerCase().includes(arama);
-      const not_eslesme = lisans.metadata?.not?.toLowerCase().includes(arama);
       const projeAdi_eslesme = lisans.project.name.toLowerCase().includes(arama);
-      if (!licenseKey_eslesme && !not_eslesme && !projeAdi_eslesme) {
+      if (!licenseKey_eslesme && !projeAdi_eslesme) {
         return false;
       }
     }
@@ -395,12 +394,6 @@ export function LisanslarYonetimi() {
                             )}
                           </div>
 
-                          {/* Not */}
-                          {lisans.metadata?.not && (
-                            <p className="text-sm text-slate-500 italic">
-                              {lisans.metadata.not}
-                            </p>
-                          )}
                         </div>
 
                         {/* İşlemler */}

@@ -19,17 +19,18 @@ export const licenseRouter = Router();
 
 licenseRouter.post(
   "/validate",
-  asyncYakala(async (req, res) => {
+  asyncYakala(async (req, res, next) => {
     const veri = lisansDogrulamaSemasi.parse(req.body);
     const apiKey = req.header("x-api-key");
 
     if (!apiKey) {
-      return res.status(401).json({
+      res.status(401).json({
         success: false,
         message: "API anahtarı zorunludur.",
         expires_at: null,
         remaining_activations: null
       });
+      return;
     }
 
     const servis = new LisansDogrulamaServisi(lisansDogrulamaDeposuOlustur(prisma));

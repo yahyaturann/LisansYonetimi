@@ -56,7 +56,8 @@ export class LisansDogrulamaServisi {
       return {
         success: false,
         message: "Proje bulunamadı.",
-        expiresAt: null
+        expiresAt: null,
+        remainingActivations: null
       };
     }
 
@@ -65,7 +66,8 @@ export class LisansDogrulamaServisi {
       return {
         success: false,
         message: "API anahtarı uyuşmuyor.",
-        expiresAt: null
+        expiresAt: null,
+        remainingActivations: null
       };
     }
 
@@ -76,7 +78,8 @@ export class LisansDogrulamaServisi {
       return {
         success: false,
         message: "Lisans bulunamadı.",
-        expiresAt: null
+        expiresAt: null,
+        remainingActivations: null
       };
     }
 
@@ -87,7 +90,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "Lisans süresi dolmuş.",
-          expiresAt: null
+          expiresAt: null,
+          remainingActivations: null
         };
       }
 
@@ -96,7 +100,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "Lisans süresi dolmuş.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
     }
@@ -110,7 +115,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "Aktivasyon limiti doldu.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
     }
@@ -122,7 +128,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "Domain doğrulaması başarısız.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
 
@@ -134,7 +141,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "Domain uyuşmuyor.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
     }
@@ -146,7 +154,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "IP adresi gönderilmedi.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
 
@@ -163,7 +172,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "IP uyuşmuyor.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
     }
@@ -175,7 +185,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "HWID gönderilmedi.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
 
@@ -192,7 +203,8 @@ export class LisansDogrulamaServisi {
         return {
           success: false,
           message: "HWID uyuşmuyor.",
-          expiresAt: lisans.expiresAt
+          expiresAt: lisans.expiresAt,
+          remainingActivations: null
         };
       }
     }

@@ -1,9 +1,9 @@
-import { resolve } from "node:path";
-
 import dotenv from "dotenv";
 import { z } from "zod";
 
-dotenv.config({ path: resolve(process.cwd(), "../../.env") });
+// Sunucuda environment variable olarak tanımlanabilir,
+// veya aynı klasördeki .env dosyasından okunabilir
+dotenv.config({ path: process.cwd() + "/.env" });
 dotenv.config();
 
 const envSemasi = z.object({
@@ -14,9 +14,9 @@ const envSemasi = z.object({
   NEXT_PUBLIC_API_URL: z.string().default("http://localhost:4000"),
   PORT: z.coerce.number().default(4000),
   DEMO_MODU: z
-    .enum(["true", "false"])
+    .union([z.literal("true"), z.literal("false"), z.literal("1"), z.literal("0")])
     .default("false")
-    .transform((deger) => deger === "true")
+    .transform((deger) => deger === "true" || deger === "1")
 });
 
 export const env = envSemasi.parse(process.env);

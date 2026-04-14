@@ -8,7 +8,7 @@ export default function DokumantasyonSayfasi() {
   return (
     <PanelKabugu
       baslik="Dokümantasyon"
-      altBaslik="Lisans doğrulama API'sini nasıl kullanacağını öğren."
+      altBaslik="Lisans do&#287;rulama API&apos;sini nas&#305;l kullanaca&#287;&#305;n&#305; &#246;&#287;ren."
     >
       <div className="prose prose-slate mx-auto max-w-none">
         {/* Giriş */}
@@ -16,7 +16,7 @@ export default function DokumantasyonSayfasi() {
           <h2 className="mb-4 text-2xl font-semibold text-slate-900">Giriş</h2>
           <p className="text-slate-600 leading-relaxed">
             Bu sistem, yazılımlarınızı lisanslama ve doğrulama için kullanabileceğiniz bir API sağlar.
-            API'yi kullanarak lisans anahtarlarını doğrulayabilir, sürelerini kontrol edebilir ve
+            API&apos;yi kullanarak lisans anahtarlarını doğrulayabilir, sürelerini kontrol edebilir ve
             aktivasyon sayılarını takip edebilirsiniz.
           </p>
         </section>
@@ -25,7 +25,7 @@ export default function DokumantasyonSayfasi() {
         <section className="mb-12">
           <h2 className="mb-4 text-2xl font-semibold text-slate-900">API Kullanımı</h2>
           <p className="text-slate-600 mb-4">
-            Lisans doğrulama için aşağıdaki endpoint'i kullanın:
+            Lisans doğrulama için aşağıdaki endpoint&apos;i kullanın:
           </p>
 
           <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
@@ -140,15 +140,15 @@ export default function DokumantasyonSayfasi() {
               },
               {
                 message: "Domain uyuşmuyor",
-                description: "Proje ayarlarında domain kontrolü aktifse, lisansın domain'i ile istemcinin domain'i eşleşmelidir"
+                description: "Proje ayarlarında domain kontrolü aktifse, lisansın domain&apos;i ile istemcinin domain&apos;i eşleşmelidir"
               },
               {
                 message: "IP uyuşmuyor",
-                description: "Proje ayarlarında IP kontrolü aktifse, lisansın IP'si ile istemcinin IP'si eşleşmelidir"
+                description: "Proje ayarlarında IP kontrolü aktifse, lisansın IP&apos;si ile istemcinin IP&apos;si eşleşmelidir"
               },
               {
                 message: "HWID uyuşmuyor",
-                description: "Proje ayarlarında HWID kontrolü aktifse, lisansın HWID'si ile istemcinin HWID'si eşleşmelidir"
+                description: "Proje ayarlarında HWID kontrolü aktifse, lisansın HWID&apos;si ile istemcinin HWID&apos;si eşleşmelidir"
               },
               {
                 message: "Aktivasyon limiti doldu",
@@ -309,7 +309,7 @@ except requests.exceptions.RequestException as e:
         <section className="rounded-xl border border-slate-200 bg-slate-50 p-6">
           <h2 className="mb-4 text-2xl font-semibold text-slate-900">Header Bilgisi</h2>
           <p className="text-slate-600 mb-4">
-            Her istekte aşağıdaki header'ı eklemelisiniz:
+            Her istekte aşağıdaki header&apos;ı eklemelisiniz:
           </p>
 
           <div className="rounded-lg bg-slate-950 p-4">
